@@ -1,8 +1,18 @@
+// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="UnitTest1.cs" company="">
+//   
+// </copyright>
+// <summary>
+//   The tests.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
 #region license
-// <copyright company="ZAN LLC" file="HelperClassTest.cs">
+
+// <copyright company="ZAN LLC" file="UnitTest1.cs">
 //   Copyright (c)2019 ZAN ALL RIGHTS RESERVED.
 // </copyright>
+
 #endregion
 
 namespace HelperClassTest
@@ -12,13 +22,14 @@ namespace HelperClassTest
     using System;
 
     using HelperClass.StringClass;
+    using HelperClass.二叉树;
 
     using NUnit.Framework;
 
     #endregion
 
     /// <summary>
-    /// The tests.
+    ///     The tests.
     /// </summary>
     public class Tests
     {
@@ -38,5 +49,20 @@ namespace HelperClassTest
             Assert.Pass();
         }
 
+        /// <summary>
+        /// 二叉树
+        /// </summary>
+        [Test]
+        public void Test12()
+        {
+            var tree = new Tree<long>(1);
+            tree.Insert(2);
+            tree.Insert(-1);
+            tree.Insert(3);
+            tree.Insert(-3);
+            tree.Insert(-2);
+            tree.WalkTree(); // 二叉树的遍历
+            Assert.Pass();
+        }
     }
 }
