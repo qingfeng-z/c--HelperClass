@@ -3,7 +3,9 @@ namespace HelperClass.StringClass
 {
     #region region
 
+    using System;
     using System.Collections.Generic;
+    using System.Linq;
     using System.Text;
 
     #endregion
@@ -13,6 +15,22 @@ namespace HelperClass.StringClass
     /// </summary>
     public static class StringHelper
     {
+        /// <summary>
+        /// 字符串反转
+        /// </summary>
+        /// <param name="str">
+        /// The str.
+        /// </param>
+        /// <returns>
+        /// The <see cref="string"/>.
+        /// </returns>
+        public static string Reverse(this string str)
+        {
+            var arr = str.ToCharArray();
+            Array.Reverse(arr);
+            return new string(arr);
+        }
+
         /// <summary>
         /// 把字符串按照分隔符转换成 List
         /// </summary>
