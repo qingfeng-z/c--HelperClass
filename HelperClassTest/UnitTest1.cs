@@ -45,8 +45,10 @@ namespace HelperClassTest
         public void Test1(string str)
         {
             str = str.Reverse();
-            Console.WriteLine(str);
-            Assert.Pass();
+            //Console.WriteLine(str);
+            //Assert.Pass();
+            var ee = str.Encode(2);
+            var a = 1;
         }
 
         /// <summary>
